@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/DBPlaceholderName')
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(require('./routes'))
+app.use(require('./routes/apiroutes'))
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
